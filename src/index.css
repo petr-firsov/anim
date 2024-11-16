@@ -61,17 +61,19 @@ body {
 
     overflow: hidden;
 
-    animation: open 1s alternate;
+    animation: collapse 1s;
 }
 
-@keyframes open {
+@keyframes collapse {
     from {
         display: none;
     }
     50% {
+        display: block;
         height: 45px;
     }
     to {
+        display: block;
         height: 90px;
     }
 }
