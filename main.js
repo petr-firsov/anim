@@ -1,0 +1,1 @@
+(()=>{"use strict";const e=document.querySelector(".textbox");document.querySelector(".collapse-btn").addEventListener("click",(()=>{e.classList.toggle("visible")}))})();
