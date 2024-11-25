@@ -27,7 +27,6 @@ body {
     height: 25px;
     border: 0;
     border-radius: 5px;
-
     color: white;
     font-size: 13px;
 }
@@ -37,44 +36,50 @@ body {
 }
 
 .textbox {
-    display: none;
-
     margin-top: 5px;
     padding: 5px;
     border: 1px solid grey;
-
     font-size: 13px;
     color: grey;
-
     overflow: hidden;
 }
 
-.textbox.visible {
-    display: block;
-
-    margin-top: 5px;
-    padding: 5px;
-    border: 1px solid grey;
-
-    font-size: 13px;
-    color: grey;
-
+.block {
+    width: 300px;
+    margin: 10px;
+    opacity: 0;
+    animation-duration: 1s;
+    max-height: 0;
     overflow: hidden;
-
-    animation: collapse 1s;
 }
 
-@keyframes collapse {
+.hiding-block {
+    animation-name: fadeOut;
+    opacity: 0;
+    transition: opacity 0.1s 1s;
+}
+
+.showing-block {
+    animation-name: fadeIn;
+    max-height: 500px;
+    opacity: 1;
+}
+
+@keyframes fadeIn {
     from {
-        display: none;
-    }
-    50% {
-        display: block;
-        height: 45px;
+        max-height: 0;
     }
     to {
-        display: block;
-        height: 90px;
+        max-height: 500px;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        max-height: 500px;
+    }
+    to {
+        max-height: 0;
     }
 }
 
