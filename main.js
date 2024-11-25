@@ -1,1 +1,1 @@
-(()=>{"use strict";const e=document.querySelector(".textbox");document.querySelector(".collapse-btn").addEventListener("click",(()=>{e.classList.toggle("visible")}))})();
+(()=>{"use strict";const c=document.querySelector(".block");document.querySelector(".collapse-btn").addEventListener("click",(()=>{c.classList.contains("showing-block")?c.classList.replace("showing-block","hiding-block"):c.classList.contains("hiding-block")?c.classList.replace("hiding-block","showing-block"):c.classList.add("showing-block")}))})();
